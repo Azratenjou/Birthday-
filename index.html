@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#120d25">
+
+    <title>Happy Birthday! ♥</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="floating-pixels" aria-hidden="true"></div>
+
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <main>
+
+        <!-- =========================
+             PASSWORD SCREEN
+        ========================== -->
+
+        <section id="lock-screen" class="screen active">
+
+            <div class="panel">
+
+                <div class="pixel-heart" aria-hidden="true">♥</div>
+
+                <p class="tiny-title">★ SECRET MESSAGE ★</p>
+
+                <h1>SECRET BIRTHDAY LOCK</h1>
+
+                <p class="subtitle">
+                    Enter the 6-digit code to open your surprise.
+                </p>
+
+                <div class="lock" aria-label="Six digit password">
+
+                    <div class="digit-box">
+                        <button class="arrow up" data-index="0">▲</button>
+                        <span class="digit" data-index="0">0</span>
+                        <button class="arrow down" data-index="0">▼</button>
+                    </div>
+
+                    <div class="digit-box">
+                        <button class="arrow up" data-index="1">▲</button>
+                        <span class="digit" data-index="1">0</span>
+                        <button class="arrow down" data-index="1">▼</button>
+                    </div>
+
+                    <div class="digit-box">
+                        <button class="arrow up" data-index="2">▲</button>
+                        <span class="digit" data-index="2">0</span>
+                        <button class="arrow down" data-index="2">▼</button>
+                    </div>
+
+                    <div class="digit-box">
+                        <button class="arrow up" data-index="3">▲</button>
+                        <span class="digit" data-index="3">0</span>
+                        <button class="arrow down" data-index="3">▼</button>
+                    </div>
+
+                    <div class="digit-box">
+                        <button class="arrow up" data-index="4">▲</button>
+                        <span class="digit" data-index="4">0</span>
+                        <button class="arrow down" data-index="4">▼</button>
+                    </div>
+
+                    <div class="digit-box">
+                        <button class="arrow up" data-index="5">▲</button>
+                        <span class="digit" data-index="5">0</span>
+                        <button class="arrow down" data-index="5">▼</button>
+                    </div>
+
+                </div>
+
+                <button id="unlock-btn" class="pixel-btn">
+                    OPEN ♥
+                </button>
+
+                <p id="status" class="status">
+                    Hint: six digits. Something special is waiting.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BIRTHDAY SCREEN
+        ========================== -->
+
+        <section id="birthday-screen" class="screen">
+
+            <div class="birthday-card">
+
+                <audio id="birthday-music" loop preload="auto">
+                    <source
+                        src="birthday-music.mp3"
+                        type="audio/mpeg"
+                    >
+                </audio>
+
+                <button
+                    id="music-btn"
+                    class="music-button"
+                    type="button"
+                >
+                    ♫ MUSIC ON
+                </button>
+
+
+                <div class="sparkles">
+                    ✦ ✧ ★ ✧ ✦
+                </div>
+
+                <p class="tiny">
+                    ★ A LITTLE SURPRISE FOR YOU ★
+                </p>
+
+                <h2>HAPPY BIRTHDAY!</h2>
+
+
+                <!-- Cake -->
+
+                <div class="cake-wrap">
+
+                    <img
+                        src="cake.gif"
+                        alt="Pixel birthday cake"
+                        class="cake"
+                    >
+
+                </div>
+
+
+                <!-- Birthday message -->
+
+                <div class="message">
+
+                    <p>
+                        Happy Birthday, Mica!!! ♡
+                    </p>
+
+                    <p>
+                        I hope today gives you plenty of reasons
+                        to smile. You deserve good days, good people,
+                        and lots of little moments that make you happy mica,happy birthday againnnnn. Sorry eto muna for now but babawi ako soon.
+                    </p>
+
+                    <p>
+                        Thank you for being such a wonderful friend.
+                        Keep being your funny, kind, amazing self.
+                        I hope this new year of your life brings you
+                        closer to the things you dream about.
+                    </p>
+
+                    <p class="final-line">
+                        Have the best birthday ever! 🎂♡
+                    </p>
+
+                </div>
+
+
+                <div class="pixel-divider">
+                    ♥ · · · ♥ · · · ♥
+                </div>
+
+
+                <!-- Secret message -->
+
+                <div class="secret-section">
+
+                    <h3>SOMETHING SECRET...</h3>
+
+                    <p class="secret-hint">
+                        There is a little message hiding here.
+                    </p>
+
+                    <button
+                        id="secret-btn"
+                        class="pixel-btn secret-button"
+                        type="button"
+                    >
+                        ♥ PRESS THE HEART ♥
+                    </button>
+
+                    <div
+                        id="secret-message"
+                        class="secret-message"
+                    >
+
+                        <div class="secret-heart">
+                            ♥
+                        </div>
+
+                        <p>
+                            YOU FOUND THE SECRET!
+                        </p>
+
+                        <p>
+                            I hope you know how much you are appreciated.
+                            Keep smiling, keep being yourself, and never
+                            forget how special you are to the people around you.
+                        </p>
+
+                        <p class="secret-final">
+                            Happy Birthday once again! ♡
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pixel-divider">
+                    ✦ · · · ♥ · · · ✦
+                </div>
+
+
+                <!-- Mini game -->
+
+                <div class="game-section">
+
+                    <h3>BIRTHDAY MINI-GAME</h3>
+
+                    <p class="game-description">
+                        Catch 10 falling hearts before time runs out!
+                    </p>
+
+                    <div class="game-info">
+
+                        <span>
+                            SCORE:
+                            <b id="score">0</b>
+                        </span>
+
+                        <span>
+                            TIME:
+                            <b id="time">30</b>
+                        </span>
+
+                    </div>
+
+
+                    <div id="game">
+
+                        <div id="game-start-screen">
+
+                            <div class="game-heart">
+                                ♥
+                            </div>
+
+                            <p>READY?</p>
+
+                            <button
+                                id="start-game"
+                                class="pixel-btn"
+                                type="button"
+                            >
+                                START GAME
+                            </button>
+
+                        </div>
+
+
+                        <!-- Player heart -->
+
+                        <button
+                            id="player"
+                            type="button"
+                            aria-label="Move player heart"
+                        >
+                            ♥
+                        </button>
+
+                    </div>
+
+
+                    <p
+                        id="game-result"
+                        class="game-result"
+                    ></p>
+
+                </div>
+
+
+                <div class="pixel-divider">
+                    ★ ♥ ★ ♥ ★
+                </div>
+
+
+                <button
+                    id="replay-btn"
+                    class="pixel-btn secondary"
+                    type="button"
+                >
+                    REPLAY PASSWORD
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
